@@ -23,7 +23,6 @@ public class LoginPage {
 	private By logo = By.cssSelector("img[title='naveenopencart']");
 	
 	private By registerLink = By.linkText("Register");
-	private By naveen = By.linkText("naveen");
 
 
 	
