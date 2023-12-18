@@ -24,7 +24,6 @@ public class LoginPage {
 	
 	private By registerLink = By.linkText("Register");
 
-
 	
 	
 	// page const...
