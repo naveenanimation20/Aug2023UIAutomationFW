@@ -1,9 +1,15 @@
 package com.qa.opencart.pages;
 
+import org.openqa.selenium.By;
+
 public class CartPage {
 
+	private By cart = By.id("cart");
 	
-	int i = 10;
+	
+	public void getCart() {
+		System.out.println("cart is added");
+	}
 	
 	
 }
