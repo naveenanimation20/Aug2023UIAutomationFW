@@ -77,7 +77,7 @@ public class ProductInfoPage {
 		getProductMetaData();
 		getProductPriceData();
 		
-		System.out.println(productMap);
+		System.out.println("product info: " + productMap);
 		return productMap;
 	}
 	
