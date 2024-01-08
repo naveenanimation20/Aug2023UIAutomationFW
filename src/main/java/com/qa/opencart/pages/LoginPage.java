@@ -10,7 +10,7 @@ import com.qa.opencart.utils.ElementUtil;
 
 import io.qameta.allure.Step;
 
-public class LoginPage {
+public class LoginPage{
 		
 	private WebDriver driver;
 	private ElementUtil eleUtil;
@@ -23,7 +23,6 @@ public class LoginPage {
 	private By logo = By.cssSelector("img[title='naveenopencart']");
 	
 	private By registerLink = By.linkText("Register");
-
 	
 	
 	// page const...
@@ -74,6 +73,8 @@ public class LoginPage {
 		eleUtil.waitForVisibilityOfElement(registerLink, AppConstants.MEDIUM_DEFAUTT_WAIT).click();
 		return new RegisterPage(driver);
 	}
+
+	
 	
 	
 

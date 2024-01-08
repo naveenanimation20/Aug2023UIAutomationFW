@@ -462,7 +462,7 @@ public class ElementUtil {
 			System.out.println(title + " title value is not present....");
 			e.printStackTrace();
 		}
-		return null;
+		return driver.getTitle();
 
 	}
 
