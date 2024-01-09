@@ -95,7 +95,7 @@ public class DriverFactory {
 	 */
 	private void initRemoteDriver(String browserName) {
 		System.out.println("Running tests on GRID with browser: " + browserName);
-
+		
 		try {
 			switch (browserName.toLowerCase().trim()) {
 			case "chrome":
