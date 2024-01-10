@@ -116,7 +116,33 @@ services:
     networks:
       - selenoid
     volumes:
-      - "/dev/shm:/dev/shm" 
+      - "/dev/shm:/dev/shm"
+  firefox_116.0:
+    image: "selenoid/vnc:firefox_116.0"
+    container_name: firefox_116.0
+    links:
+      - selenoid
+      - selenoid-ui
+    depends_on:
+      - selenoid
+      - selenoid-ui
+    networks:
+      - selenoid
+    volumes:
+      - "/dev/shm:/dev/shm"
+  firefox_117.0:
+    image: "selenoid/vnc:firefox_117.0"
+    container_name: firefox_117.0
+    links:
+      - selenoid
+      - selenoid-ui
+    depends_on:
+      - selenoid
+      - selenoid-ui
+    networks:
+      - selenoid
+    volumes:
+      - "/dev/shm:/dev/shm"      
 
                     
 networks:
