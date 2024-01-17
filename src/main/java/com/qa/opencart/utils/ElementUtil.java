@@ -668,5 +668,10 @@ public class ElementUtil {
 				.toString();
 		return Boolean.parseBoolean(flag);
 	}
+	
+	public void goTest() {
+		System.out.println("go test");
+	}
+	
 
 }

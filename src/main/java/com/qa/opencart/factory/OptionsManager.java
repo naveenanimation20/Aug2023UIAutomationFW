@@ -4,6 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Properties;
 
+import org.openqa.selenium.Platform;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.firefox.FirefoxOptions;
@@ -64,6 +65,7 @@ public class OptionsManager {
 	
 	public EdgeOptions getEdgeOptions() {
 		eo = new EdgeOptions();
+		eo.setCapability("platform", Platform.LINUX);
 		if(Boolean.parseBoolean(prop.getProperty("headless").trim())) eo.addArguments("--headless");
 		if(Boolean.parseBoolean(prop.getProperty("incognito").trim())) eo.addArguments("--inPrivate");
 		return eo;
