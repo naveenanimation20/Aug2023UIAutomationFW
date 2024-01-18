@@ -1,5 +1,7 @@
 package com.qa.opencart.pages;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -24,6 +26,9 @@ public class LoginPage{
 	
 	private By registerLink = By.linkText("Register");
 	
+    private static final Logger log = LogManager.getLogger(LoginPage.class);
+
+	
 	
 	// page const...
 	public LoginPage(WebDriver driver) {
@@ -36,14 +41,16 @@ public class LoginPage{
 	@Step("getting login page title")
 	public String getLoginPageTitle() {
 		String title = eleUtil.waitForTitleIs(AppConstants.LOGIN_PAGE_TITLE, AppConstants.SHORT_DEFAUTT_WAIT);
-		System.out.println("login page title:" + title);
+		//System.out.println("login page title:" + title);
+		log.info("login page title:" + title);
 		return title;
 	}
 
 	@Step("getting login page url")
 	public String getLoginPageURL() {
 		String url = eleUtil.waitForURLContains(AppConstants.LOGIN_PAGE_URL_FRACTION, AppConstants.SHORT_DEFAUTT_WAIT);
-		System.out.println("login page url:" + url);
+		//System.out.println("login page url:" + url);
+		log.info("login page url:" + url);
 		return url;
 	}
 
@@ -60,7 +67,8 @@ public class LoginPage{
 
 	@Step("username is : {0} and password {1} ")
 	public AccountsPage doLogin(String username, String pwd) {
-		System.out.println("creds are: " + username + " : " + pwd);
+		//System.out.println("creds are: " + username + " : " + pwd);
+		log.info("creds are : " + username + " : " + pwd);
 		eleUtil.waitForVisibilityOfElement(userName, AppConstants.MEDIUM_DEFAUTT_WAIT).sendKeys(username);
 		eleUtil.doSendKeys(password, pwd);
 		eleUtil.doClick(loginBtn);

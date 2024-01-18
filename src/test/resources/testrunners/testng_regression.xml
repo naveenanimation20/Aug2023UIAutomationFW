@@ -11,14 +11,14 @@
 		<listener
 			class-name="com.qa.opencart.listeners.TestAllureListener" />
 
-		<!-- <listener class-name="com.qa.opencart.listeners.AnnotationTransformer" 
-			/> -->
+		<listener class-name="com.qa.opencart.listeners.AnnotationTransformer" 
+			/>
 
 	</listeners>
 
 
-	<!-- <test name="Login Page Test">
-		<parameter name="browser" value="firefox" />
+	<test name="Login Page Test">
+		<parameter name="browser" value="chrome" />
 		<parameter name="browserversion" value="117" />
 		<parameter name="testname" value="Login Page Test" />
 
@@ -26,7 +26,7 @@
 		<classes>
 			<class name="com.qa.opencart.tests.LoginPageTest" />
 		</classes>
-	</test> -->
+	</test>
 
 
 	<test name="Accounts Page Test">

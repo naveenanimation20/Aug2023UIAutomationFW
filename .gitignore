@@ -4,8 +4,9 @@ screenshot/
 test-output/
 build/
 reports/
+logs/
 
-application.log
+opencart.log
 ##############################
 ## Java
 ##############################
